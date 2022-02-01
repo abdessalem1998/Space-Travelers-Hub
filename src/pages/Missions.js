@@ -49,12 +49,18 @@ const Missions = () => {
             missionsArray.map((mission) => {
               /* disable this rule because it is given from the API */
               /* eslint-disable camelcase */
-              const { mission_name, mission_id, description } = mission;
+              const {
+                mission_name,
+                mission_id,
+                description,
+                reserved,
+              } = mission;
               return (
                 <Mission
                   key={mission_id}
                   id={mission_id}
                   name={mission_name}
+                  reserved={reserved}
                   description={description}
                 />
               );
