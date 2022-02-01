@@ -1,11 +1,20 @@
-/* eslint-disable */
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../../redux/Missions/Missions';
+import { joinMission, leaveMission } from '../../redux/Missions/Missions';
+
 const Mission = (mission) => {
   const dispatch = useDispatch();
-  const { id, name, description, reserved } = mission;
+  const {
+    id,
+    name,
+    description,
+    reserved,
+  } = mission;
   const joinHandler = () => {
     dispatch(joinMission(id));
+  };
+
+  const leaveHandler = () => {
+    dispatch(leaveMission(id));
   };
 
   return (
@@ -22,7 +31,7 @@ const Mission = (mission) => {
       <td className="align-middle">
         {
           reserved
-            ? <button type="button" className="btn btn-outline-danger">Leave Mission</button>
+            ? <button type="button" onClick={leaveHandler} className="btn btn-outline-danger">Leave Mission</button>
             : <button type="button" onClick={joinHandler} className="btn btn-outline-secondary">Join Mission</button>
         }
       </td>

@@ -30,7 +30,9 @@ const Missions = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    if (missionsArray.length === 0) {
+      fetchData();
+    }
   }, []);
 
   return (
