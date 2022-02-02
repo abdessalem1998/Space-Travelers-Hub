@@ -48,6 +48,7 @@ const Rockets = () => {
             name,
             image,
             description,
+            reserved,
           } = rocket;
           return (
             <Rocket
@@ -56,6 +57,7 @@ const Rockets = () => {
               name={name}
               image={image}
               description={description}
+              reserved={reserved}
             />
           );
         })
