@@ -36,7 +36,7 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <table className="table table-striped table-bordered">
         <thead>
           <tr>
