@@ -1,6 +1,5 @@
-/* eslint-disable */
 import { useDispatch } from 'react-redux';
-import { joinRocket } from '../../redux/Rockets/Rockets';
+import { joinRocket, leaveRocket } from '../../redux/Rockets/Rockets';
 
 const Rocket = (rocket) => {
   const dispatch = useDispatch();
@@ -17,6 +16,10 @@ const Rocket = (rocket) => {
     dispatch(joinRocket(id));
   };
 
+  const leaveHandler = () => {
+    dispatch(leaveRocket(id));
+  };
+
   return (
     <div className="card mb-3">
       <div className="row">
@@ -29,15 +32,15 @@ const Rocket = (rocket) => {
             <p className="card-text">
               {
                 reserved
-                ? <span className="badge bg-info text-light">Reserved</span>
-                : <span className="badge bg-secondary"></span>
+                  ? <span className="badge bg-info text-light">Reserved</span>
+                  : <span className="badge bg-secondary" />
               }
               &nbsp;
               {description}
             </p>
             {
               reserved
-                ? <button type="button" className="btn btn-outline-secondary">Cancel Reservation</button>
+                ? <button type="button" onClick={leaveHandler} className="btn btn-outline-secondary">Cancel Reservation</button>
                 : <button type="button" onClick={joinHandler} className="btn btn-primary">Reserve Rocket</button>
             }
           </div>
