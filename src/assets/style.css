@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+/* color scheme */
+
+:root {
+  --bgblue: #0290ff;
+  --bgdark: #303540;
+  --bgwhite: #fff;
+  --bginfo: #17a2b8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bgblue);
+  font-family: 'Poppins', sans-serif;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px 20px 30px;
+}
+
+header .logo {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+header .mylogo {
+  max-width: 50px;
+}
+
+header h1 {
+  font-size: 1.5em;
+  color: var(--bgdark);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+}
+
+header nav {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1em;
+    color: var(--bgdark);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+  }
+}
