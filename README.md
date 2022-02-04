@@ -20,6 +20,11 @@
 
 [Check the demo here](https://spacehub2022.herokuapp.com/)
 
+## Setup
+Go to the top of the page, press te green button that says "Code", and copy the link. Then you have to go to your console and type
+git clone 'repository-link'  
+That's all, you are ready to go!
+
 ## Getting Started
 
 In the project directory, you can run:
