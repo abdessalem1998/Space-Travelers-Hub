@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Rockets from './pages/Rocket';
+import Rockets from './pages/Rockets';
 import MyProfile from './pages/MyProfil';
 import Missions from './pages/Missions';
-import Rockets from './pages/Rockets';
 import './App.css';
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/profile" element={<MyProfile />} />
         <Route path="/missions" element={<Missions />} />
-        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/" element={<Rockets />} />
       </Routes>
     </div>
   );

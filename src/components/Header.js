@@ -13,21 +13,24 @@ const Header = () => (
       </div>
       <nav>
         <NavLink
-          to="/rockets"
-          activeclassname="active"
+          to="/"
+          activeClassName="active"
+          style={{ textDecoration: 'none' }}
         >
           Rockets
         </NavLink>
         <NavLink
           to="/missions"
-          activeclassname="active"
+          style={{ textDecoration: 'none' }}
+          activeClassName="active"
         >
           Missions
         </NavLink>
         {' | '}
         <NavLink
           to="/profile"
-          activeclassname="active"
+          activeClassName="active"
+          style={{ textDecoration: 'none' }}
         >
           {' '}
           My profile
